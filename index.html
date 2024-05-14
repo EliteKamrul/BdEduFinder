@@ -23,6 +23,7 @@
             font-family: 'Arial', sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
+            margin: 0; /* Reset default margin */
         }
 
         .navbar {
@@ -32,7 +33,6 @@
         .navbar-brand {
             font-weight: bold;
             font-size: 1.5rem;
-            
         }
 
         .content {
@@ -105,71 +105,55 @@
                 font-size: 1.2rem;
             }
 
+            .navbar-nav {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-item {
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 10px;
+                text-align: center;
+            }
+
             .content {
                 padding: 10px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .navbar-brand {
-                font-size: 1rem;
             }
 
             .card {
                 margin-bottom: 20px;
             }
+
+            footer {
+                padding: 10px;
+            }
+
+            /* Hide the text on mobile */
+            .navbar-brand-mobile {
+                display: none;
+            }
         }
-        @media (max-width: 992px) {
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-}
 
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1rem;
-    }
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 0.8rem;
+            }
 
-    .navbar-nav {
-        margin-top: 10px;
-    }
+            .content {
+                padding: 10px;
+            }
 
-    .navbar-toggler {
-        margin-top: 10px;
-    }
-}
+            .card {
+                margin-bottom: 20px;
+            }
 
-@media (max-width: 576px) {
-    .navbar-brand {
-        font-size: 0.8rem;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-    }
-
-    .navbar-nav .nav-item {
-        margin-top: 10px;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .content {
-        padding: 10px;
-    }
-
-    .card {
-        margin-bottom: 20px;
-    }
-
-    footer {
-        padding: 10px;
-    }
-}
-
+            footer {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -177,7 +161,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand mx-auto" href="#">BANGLADESH ALL EDUCATION BOARD LIST</a>
+            <a class="navbar-brand mx-auto navbar-brand-mobile" href="#">BANGLADESH ALL EDUCATION BOARD LIST</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -202,62 +186,61 @@
         <section id="boards" class="my-5">
             <h2 class="text-center mb-4"><i class="fas fa-chalkboard"></i> Education Boards</h2>
             <div class="row">
-                <div class="row">
-    <!-- Dhaka Education Board -->
-    <div class="col-lg-4 mb-4">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title text-center">Dhaka Education Board </h4>
-                <p class="card-text text-center"><a href="https://dhakaeducationboard.gov.bd/" target="_blank">Website</a></p>
-                <p class="card-text text-center"><a href="https://dhakaeducationboard.gov.bd/index.php/site/subdomain" target="_blank">Institute List by EIIN</a></p>
-            </div>
-        </div>
-    </div>
+                <!-- Dhaka Education Board -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Dhaka Education Board </h4>
+                            <p class="card-text text-center"><a href="https://dhakaeducationboard.gov.bd/" target="_blank">Website</a></p>
+                            <p class="card-text text-center"><a href="https://dhakaeducationboard.gov.bd/index.php/site/subdomain" target="_blank">Institute List by EIIN</a></p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Barisal Education Board -->
-    <div class="col-lg-4 mb-4">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title text-center">Barisal Education Board </h4>
-                <p class="card-text text-center"><a href="https://www.barisalboard.gov.bd/" target="_blank">Website</a></p>
-                <p class="card-text text-center"><a href="https://www.barisalboard.gov.bd/home/subdomain" target="_blank">Institute List by EIIN</a></p>
-            </div>
-        </div>
-    </div>
+                <!-- Barisal Education Board -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Barisal Education Board </h4>
+                            <p class="card-text text-center"><a href="https://www.barisalboard.gov.bd/" target="_blank">Website</a></p>
+                            <p class="card-text text-center"><a href="https://www.barisalboard.gov.bd/home/subdomain" target="_blank">Institute List by EIIN</a></p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Jessore Education Board -->
-    <div class="col-lg-4 mb-4">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title text-center">Jessore Education Board </h4>
-                <p class="card-text text-center"><a href="https://www.jessoreboard.gov.bd/" target="_blank">Website</a></p>
-                <p class="card-text text-center"><a href="https://www.jessoreboard.gov.bd/index.php/site/institute" target="_blank">Institute List by EIIN</a></p>
-            </div>
-        </div>
-    </div>
+                <!-- Jessore Education Board -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Jessore Education Board </h4>
+                            <p class="card-text text-center"><a href="https://www.jessoreboard.gov.bd/" target="_blank">Website</a></p>
+                            <p class="card-text text-center"><a href="https://www.jessoreboard.gov.bd/index.php/site/institute" target="_blank">Institute List by EIIN</a></p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Madrasah Education Board -->
-    <div class="col-lg-4 mb-4">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title text-center">Madrasah Education Board </h4>
-                <p class="card-text text-center"><a href="https://ebmeb.gov.bd" target="_blank">Website</a></p>
-                <p class="card-text text-center"><a href="https://find.ebmeb.gov.bd/9990/institute-list.html" target="_blank">Institute List by EIIN</a></p>
-            </div>
-        </div>
-    </div>
+                <!-- Madrasah Education Board -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Madrasah Education Board </h4>
+                            <p class="card-text text-center"><a href="https://ebmeb.gov.bd" target="_blank">Website</a></p>
+                            <p class="card-text text-center"><a href="https://find.ebmeb.gov.bd/9990/institute-list.html" target="_blank">Institute List by EIIN</a></p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- National Portal for Free and Open Source Software (NPFTR) -->
-    <div class="col-lg-4 mb-4">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title text-center">National Portal for Free and Open Source Software (NPFTR) 🌐</h4>
-                <p class="card-text text-center"><a href="http://npftr.portal.gov.bd/new-domain" target="_blank">Website</a></p>
+                <!-- National Portal for Free and Open Source Software (NPFTR) -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">National Portal for Free and Open Source Software (NPFTR) 🌐</h4>
+                            <p class="card-text text-center"><a href="http://npftr.portal.gov.bd/new-domain" target="_blank">Website</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-
+        </section>
         <!-- End Education Boards Section -->
 
         <!-- BANBEIS Section -->
