@@ -25,6 +25,30 @@ Explore the official websites and institute lists of various education boards in
 5. **National Portal for Free and Open Source Software (NPFTR)** 🌐
    - [Website](http://npftr.portal.gov.bd/new-domain)
 
+# People's Republic of Bangladesh
+
+## Ministry of Education
+### Bangladesh Bureau of Educational Information and Statistics (BANBEIS)
+
+Website: [www.banbeis.gov.bd](http://www.banbeis.gov.bd)
+
+## Services
+
+### Institute Search
+Search your institute by EIIN: <br>
+[Institute Search](http://202.72.235.210/ban_survey/public/institute-search)
+
+### Admin Login
+Login to update information: <br>
+[Admin Login](http://202.72.235.210/ban_survey/public/moderator)
+
+### Update Information
+Login to update information: <br>
+[Update Information](http://202.72.235.210/ban_survey/public/)
+
+
+
+
 ## How to Use
 
 It's easy to get started:
